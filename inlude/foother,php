@@ -1,0 +1,3 @@
+<?php
+echo "<p>Copyright &copy; 1921-" . date("Y") . " branko.lovestoblog.com</p>";
+?>

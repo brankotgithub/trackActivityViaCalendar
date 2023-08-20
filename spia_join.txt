@@ -1,0 +1,26 @@
+CREATE TABLE spia_join
+SELECT akta.idAkta, akta.NazivAkta, izradjivac.id, izradjivac.firstname, izradjivac.lastname, projekat.idProjekat, projekat.NazivProjekta, subjekat.idSubjekat, subjekat.NazivSubjekta
+FROM (((akta
+INNER JOIN projekat ON akta.ProjekatID = projekat.idProjekat)
+INNER JOIN subjekat ON akta.SubjekatID = subjekat.idSubjekat)
+INNER JOIN izradjivac ON akta.IzradjivacID = izradjivac.id);
+ALTER TABLE `spia_join` ADD 
+`idSPIA` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`idSPIA`);
+
+//php code
+
+$sql = "CREATE TABLE spia_join\n"
+
+    . "SELECT akta.idAkta, akta.NazivAkta, izradjivac.id, izradjivac.firstname, izradjivac.lastname, projekat.idProjekat, projekat.NazivProjekta, subjekat.idSubjekat, subjekat.NazivSubjekta\n"
+
+    . "FROM (((akta\n"
+
+    . "INNER JOIN projekat ON akta.ProjekatID = projekat.idProjekat)\n"
+
+    . "INNER JOIN subjekat ON akta.SubjekatID = subjekat.idSubjekat)\n"
+
+    . "INNER JOIN izradjivac ON akta.IzradjivacID = izradjivac.id)";
+
+$sql = "ALTER TABLE `spia_join` ADD \n"
+
+    . "`idSPIA` INT NOT NULL AUTO_INCREMENT FIRST, ADD PRIMARY KEY (`idSPIA`)";
