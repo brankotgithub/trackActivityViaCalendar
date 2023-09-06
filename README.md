@@ -1,5 +1,5 @@
 # trackActivityViaCalendar
 PHP based site
-URL https://branko.lovestoblog.com
+URL https://direktor.glosec.rs
 username Branko
-password 1234567
+password 123456
