@@ -1,4 +1,4 @@
-# trackActivityViaCalendar
+# CRUD trackActivityViaCalendar
 PHP based site
 URL https://direktor.glosec.rs
 username Branko
